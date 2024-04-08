@@ -1,7 +1,7 @@
 # PetShop
 
 ## Modo de execução:
-### 1. Clonar o repositório em seu ambiente de execução;
+### 1. Clonar o repositório em seu ambiente de execução ou fazer o download da pasta zip;
 ### 2. Back end:
      #### entrar na pasta api (cd /Pet_Shop_Calculator/api); 
      #### usar o comando virtualenv -p python3 venv para criar o ambiente virtual e ativá-lo com o comando source '.venv/bin/activate'
