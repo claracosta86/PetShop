@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../../css/DataPage.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios"; 
 
 export default function DataPage() {
@@ -17,13 +17,15 @@ export default function DataPage() {
     const [smallDogs, setSmallDogs] = useState("");
     const [bigDogs, setBigDogs] = useState("");
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post('/api', {
-          date,
-          smallDogs,
-          bigDogs
+        const response = await axios.post('http://localhost:8080/api', {
+          "date": date,
+          "smallDogs": smallDogs,
+          "bigDogs": bigDogs
         });
 
         if (response.data.success){
@@ -34,6 +36,7 @@ export default function DataPage() {
       } catch (error) {
           console.error("Error submitting form:", error);
       }
+      navigate('/resultpage')
     }
 
   return (
@@ -97,9 +100,9 @@ export default function DataPage() {
 
           <div>
             <div className="button_ok">
-              <Link to = "/resultpage">
+              {/* <Link to = "/resultpage"> */}
                 <button style ={button_ok}>OK!</button>
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
 
