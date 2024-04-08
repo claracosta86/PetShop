@@ -1,0 +1,127 @@
+.body{
+    width: 5452px;
+    height: 2530px;
+    background: linear-gradient(255.19deg, rgba(246, 86, 194, 0.348) 0%, rgba(255, 255, 34, 0.29) 100%);
+}
+
+.title{
+    /* Pet Shop Calculator */
+
+    position: absolute;
+    width: 1658.9px;
+    height: 95.51px;
+    left: 1901.13px;
+    top: 67px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 135px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.pet_shop{
+    /*o pet shop ideal... */
+    position: absolute;
+    width: 1773px;
+    height: 199px;
+    left: 2211.5px;
+    top: 491px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 105px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.result1{
+    /*o pet shop ideal... */
+    position: absolute;
+    width: 1773px;
+    height: 199px;
+    left: 1911.5px;
+    top: 741px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 95px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+.preco{
+    /*por apenas */
+    position: absolute;
+    width: 1773px;
+    height: 199px;
+    left: 2461.5px;
+    top: 991px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 105px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.result2{
+    /*o pet shop ideal... */
+    position: absolute;
+    width: 1773px;
+    height: 199px;
+    left: 1911.5px;
+    top: 1241px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 95px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.button_refresh{
+    /* Ellipse 5 */
+
+    position: absolute;
+    left: 3780px;
+    top: 1226px;
+
+
+    /* button_refresh */
+
+    position: absolute;
+    width: 395px;
+    height: 145px;
+    left: 3780px;
+    top: 1126px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 55px;
+    text-align: center;
+}

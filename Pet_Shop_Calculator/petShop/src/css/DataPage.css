@@ -1,0 +1,210 @@
+.body{
+    width: 5452px;
+    height: 2530px;
+    background: linear-gradient(255.19deg, rgba(246, 86, 194, 0.348) 0%, rgba(255, 255, 34, 0.29) 100%);
+}
+
+.title{
+    /* Pet Shop Calculator */
+
+    position: absolute;
+    width: 1658.9px;
+    height: 95.51px;
+    left: 1851.13px;
+    top: 67px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 135px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.bath{
+ 
+    /* insira a data do banho: */
+
+    position: absolute;
+    width: 1479px;
+    height: 127px;
+    left: 1311.5px;
+    top: 613.5px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 105px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.type1{
+
+    /* Ellipse 1 */
+
+    position: absolute;
+    width: 1235.69px;
+    height: 153.43px;
+    left: 2998px;
+    top: 613.5px;
+
+    background-color: #FFFFFF;
+
+
+    /* dd/mm/aaaa */
+
+    position: absolute;
+    width: 1161.48px;
+    height: 105.04px;
+    left: 2998.14px;
+    top: 617.37px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.smalls{
+    /* quantos cachorros pequenos? */
+
+    position: absolute;
+    width: 1773px;
+    height: 199px;
+    left: 1311.5px;
+    top: 991px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 105px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.type2{
+    
+    /* Ellipse 1 */
+
+    position: absolute;
+    width: 1235.69px;
+    height: 153.43px;
+    left: 2991px;
+    top: 991px;
+
+    background: #FFFFFF;
+
+
+    /* digite um número... */
+
+    position: absolute;
+    width: 1161.48px;
+    height: 105.04px;
+    left: 2998.14px;
+    top: 995px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.bigs{
+    /* quantos cachorros grandes? */
+
+    position: absolute;
+    width: 1648px;
+    height: 101px;
+    left: 1311.5px;
+    top: 1430px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 105px;
+    line-height: 118px;
+    text-align: left;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.type3{
+
+    /* Ellipse 1 */
+
+    position: absolute;
+    width: 1235.69px;
+    height: 153.43px;
+    left: 2991px;
+    top: 1430px;
+
+    background: #FFFFFF;
+
+
+    /* digite um número... */
+
+    position: absolute;
+    width: 1161.48px;
+    height: 105.04px;
+    left: 2998.14px;
+    top: 1434px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.button_ok{
+
+    /* Ellipse 2 */
+
+    position: absolute;
+    width: 319.32px;
+    height: 123.92px;
+    left: 2338px;
+    top: 1771px;
+
+
+    /* button_ok */
+
+    position: absolute;
+    width: 339.7px;
+    height: 107.42px;
+    left: 2528px;
+    top: 1801.16px;
+
+    font-family: 'Courier Prime';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 95px;
+    line-height: 157px;
+    text-align: center;
+
+    color: #000000;
+}
+
+
