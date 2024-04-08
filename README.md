@@ -11,7 +11,7 @@
 ### 3. Front end:
     #### entrar na pasta PetShop;
     #### usar o comando npm install para instalar os módulos do node e npm install react-router-dom e npm install axios para instalar dois módulos extras;
-    #### usar o comando npm start para iniciar o localhost;
+    #### usar o comando npm run dev para iniciar o localhost;
     #### espera-se que o node-js já esteja instalado.
 ### 4. Abrir o link do localhost e interagir com a página.
 
