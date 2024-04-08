@@ -24,12 +24,12 @@ export default function ResultPage() {
         </div>   
 
         <div className= "pet_shop">
-          o seu pet shop ideal é... {petShop}
+          o seu pet shop ideal é...  <p> {petShop} </p>
         </div>  
 
 
         <div className= "preco">
-          por apenas: {preco}
+          por apenas: <p> {preco} </p>
         </div>    
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
