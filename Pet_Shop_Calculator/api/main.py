@@ -3,7 +3,7 @@ from flask_cors import CORS
 import datetime
 
 app = Flask(__name__)
-cor = CORS(app, origins = '/datapage')
+CORS(app)
 @app.route('/api', methods = ['POST'])
 
 
@@ -55,8 +55,6 @@ def main():
 
     data = request.get_json() 
 
-    print("Received data:", data)
-
     date = data.get('date')
     smalls = data.get('smallDogs')
     bigs = data.get('bigDogs')
@@ -71,18 +69,7 @@ def main():
 
     # petShop.commit() 
     # preco.commit()
-    return jsonify({"petShop": petShop}), jsonify({"preco": preco})
+    return jsonify({"petShop": petShop}, {"preco": preco})
 
 if __name__ == "__main__":
     app.run(debug = True, port = "8080")
-
-# from flask import Flask, jsonify
-
-# app = Flask(__name__)
-
-# @app.route('/')
-# def index():
-#     return "Hello, Flask!"
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
