@@ -3,8 +3,8 @@ from flask_cors import CORS
 import datetime
 
 app = Flask(__name__)
-CORS(app)
-@app.route('/api', methods = ['POST'])
+CORS(app, origins=['http://localhost:5173/datapage', 'http://localhost:5173/resultpage'])
+@app.route('/api', methods = ['POST', 'OPTIONS'])
 
 
 def meu_canino_feliz (weekday, smalls, bigs):
@@ -14,6 +14,7 @@ def meu_canino_feliz (weekday, smalls, bigs):
 
     elif weekday == 1:
         total = (smalls*20 + bigs*40)*1.2
+
     return total
 
 def vai_rex (weekday, smalls, bigs):
@@ -53,23 +54,24 @@ def lowest_price(mcf, vr, cc):
 
 def main():
 
-    data = request.get_json() 
+    if request.data == 'POST':
+        data = request.get_json() 
 
-    date = data.get('date')
-    smalls = data.get('smallDogs')
-    bigs = data.get('bigDogs')
+        date = data.get('date')
+        smalls = data.get('smallDogs')
+        bigs = data.get('bigDogs')
+        
+        weekday = which_weekday(date)
+
+        mcf = meu_canino_feliz(weekday, smalls, bigs);
+        vr = vai_rex(weekday, smalls, bigs);
+        cc = chow_chawgas(smalls, bigs);
+
+        petShop, preco = (lowest_price(mcf, vr, cc))
+
+        return jsonify({"petShop": petShop}, {"preco": preco})
     
-    weekday = which_weekday(date)
-
-    mcf = meu_canino_feliz(weekday, smalls, bigs);
-    vr = vai_rex(weekday, smalls, bigs);
-    cc = chow_chawgas(smalls, bigs);
-
-    petShop, preco = (lowest_price(mcf, vr, cc))
-
-    # petShop.commit() 
-    # preco.commit()
-    return jsonify({"petShop": petShop}, {"preco": preco})
-
+    elif request.data == 'OPTIONS':
+        return '', 200
 if __name__ == "__main__":
     app.run(debug = True, port = "8080")
