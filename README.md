@@ -5,8 +5,8 @@
 ### 2. Back end:
      #### entrar na pasta api; 
      #### usar o comando virtualenv -p python3 venv para criar o ambiente virtual e ativá-lo com o comando source '.venv/bin/activate'
-     #### usar os comandos pip3 install FLask e pip3 install Flask-CORS;
-     #### transferir o arquivo main.py da pasta api para a pasta venv e usar o comando python3 main.py para iniciar o back end;
+     #### transferir o arquivo main.py da pasta api para a pasta venv e entrar na pasta venv;
+     #### usar os comandos pip3 install FLask e pip3 install Flask-COR e usar o comando python3 main.py para iniciar o back end;
      #### *esses comandos são para WSL, verfique as adaptações de seu sistema operacional.
 ### 3. Front end:
     #### entrar na pasta PetShop;
