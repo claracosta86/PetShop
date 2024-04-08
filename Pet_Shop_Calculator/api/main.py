@@ -54,7 +54,7 @@ def lowest_price(mcf, vr, cc):
 
 def main():
 
-    if request.data == 'POST':
+    if request.method == 'POST':
         data = request.get_json() 
 
         date = data.get('date')
@@ -71,7 +71,7 @@ def main():
 
         return jsonify({"petShop": petShop}, {"preco": preco})
     
-    elif request.data == 'OPTIONS':
+    elif request.method == 'OPTIONS':
         return '', 200
 if __name__ == "__main__":
     app.run(debug = True, port = "8080")
