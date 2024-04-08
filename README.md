@@ -3,13 +3,13 @@
 ## Modo de execução:
 ### 1. Clonar o repositório em seu ambiente de execução ou fazer o download da pasta zip;
 ### 2. Back end:
-     #### entrar na pasta api (cd /Pet_Shop_Calculator/api); 
+     #### entrar na pasta api; 
      #### usar o comando virtualenv -p python3 venv para criar o ambiente virtual e ativá-lo com o comando source '.venv/bin/activate'
      #### usar os comandos pip3 install FLask e pip3 install Flask-CORS;
      #### transferir o arquivo main.py da pasta api para a pasta venv e usar o comando python3 main.py para iniciar o back end;
      #### *esses comandos são para WSL, verfique as adaptações de seu sistema operacional.
 ### 3. Front end:
-    #### entrar na pasta PetShop (cd ../Pet_Shop_Calculator/petShop);
+    #### entrar na pasta PetShop;
     #### usar o comando npm install para instalar os módulos do node e npm install react-router-dom e npm install axious para instalar dois módulos extras;
     #### usar o comando npm start para iniciar o localhost;
     #### espera-se que o node-js já esteja instalado.
