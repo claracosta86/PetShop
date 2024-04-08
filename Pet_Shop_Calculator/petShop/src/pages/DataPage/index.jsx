@@ -13,34 +13,28 @@ export default function DataPage() {
     width: '478.12px',
     height: '200px'
   };
+    const [date, setDate] = useState("");
+    const [smallDogs, setSmallDogs] = useState("");
+    const [bigDogs, setBigDogs] = useState("");
 
-  const [date, setDate] = useState("");
-  const [smallDogs, setSmallDogs] = useState("");
-  const [bigDogs, setBigDogs] = useState("");
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await axios.post('/api', {
+          date,
+          smallDogs,
+          bigDogs
+        });
 
-  const handleSubmit = async () => {
-
-    console.log("Date:", date);
-    console.log("Small Dogs:", smallDogs);
-    console.log("Big Dogs:", bigDogs);
-
-    try {
-      const response = await axios.post("/", {
-        date,
-        smallDogs,
-        bigDogs
-      });
-
-      console.log("Response data:", response.data);
-  
-      if (response.status === 200) {
-        const { petShop, preco } = response.data;
-        window.location.href = `/resultpage?petShop=${petShop}&preco=${preco}`;
+        if (response.data.success){
+          console.log("Response data:", response.data);
+          const { petShop, preco } = response.data;
+          window.location.href = `/resultpage?petShop=${petShop}&preco=${preco}`;
+        }
+      } catch (error) {
+          console.error("Error submitting form:", error);
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
     }
-  };
 
   return (
     <>
@@ -57,56 +51,59 @@ export default function DataPage() {
            </div>
         </div>
 
-        <div className="bath">
-          insira a data do banho:
-        </div>
+      <form onSubmit={handleSubmit}>
 
-        <input
-          name = "date"
-          type="text"
-          className="type1"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          style={{ fontSize: "116px", background: "#FFFFFF" }}
-          placeholder="dd/mm/aaaa"
-        />
-
-        <div className="smalls">
-          quantos cachorros pequenos?
-        </div>
-
-        <input
-          name = "smalls"
-          type="number"
-          className="type2"
-          value={smallDogs}
-          onChange={(e) => setSmallDogs(e.target.value)}
-          style={{ fontSize: "116px", background: "#FFFFFF" }}
-          placeholder="digite um número..."
-        />
-
-        <div className="bigs">
-          quantos cachorros grandes?
-        </div>
-
-        <input
-          name = "bigs"
-          type="number"
-          className="type3"
-          value={bigDogs}
-          onChange={(e) => setBigDogs(e.target.value)}
-          style={{ fontSize: "116px", background: "#FFFFFF" }}
-          placeholder="digite um número..."
-        />
-
-        <div>
-          <div className="button_ok">
-            <Link to = "/resultpage">
-              <button style ={button_ok}>OK!</button>
-            </Link>
+          <div className="bath">
+            insira a data do banho:
           </div>
-        </div>
 
+          <input
+            name = "date"
+            type="text"
+            className="type1"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            style={{ fontSize: "116px", background: "#FFFFFF" }}
+            placeholder="dd/mm/aaaa"
+          />
+
+          <div className="smalls">
+            quantos cachorros pequenos?
+          </div>
+
+          <input
+            name = "smalls"
+            type="number"
+            className="type2"
+            value={smallDogs}
+            onChange={(e) => setSmallDogs(e.target.value)}
+            style={{ fontSize: "116px", background: "#FFFFFF" }}
+            placeholder="digite um número..."
+          />
+
+          <div className="bigs">
+            quantos cachorros grandes?
+          </div>
+
+          <input
+            name = "bigs"
+            type="number"
+            className="type3"
+            value={bigDogs}
+            onChange={(e) => setBigDogs(e.target.value)}
+            style={{ fontSize: "116px", background: "#FFFFFF" }}
+            placeholder="digite um número..."
+          />
+
+          <div>
+            <div className="button_ok">
+              <Link to = "/resultpage">
+                <button style ={button_ok}>OK!</button>
+              </Link>
+            </div>
+          </div>
+
+        </form>
       </div>
     </>
   );
